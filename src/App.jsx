@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import './App.css';
 import Logo from './componets/header/logo.jsx';
 import Searchbox from './componets/header/searchbox.jsx';
@@ -9,13 +9,23 @@ import MiniPlayer from './componets/player/MiniPlayer';
 import MusicPlayer from './componets/player/MusicPlayer';
 import QueuePanel from './componets/player/QueuePanel';
 import LyricsPanel from './componets/player/LyricsPanel';
+import LoadingScreen from './componets/LoadingScreen.jsx';
 import { usePlayer } from './context/PlayerContext';
 
 function App() {
   const { showFullPlayer, showQueue, showLyrics, current } = usePlayer();
 
+  const alreadySeen = sessionStorage.getItem('skipAppLoader') === 'true';
+  const [showLoader, setShowLoader] = useState(!alreadySeen);
+
+  const handleLoaderDone = useCallback(() => {
+    sessionStorage.setItem('skipAppLoader', 'true');
+    setShowLoader(false);
+  }, []);
+
   return (
     <div className="flex flex-col h-screen bg-black overflow-hidden">
+      {showLoader && <LoadingScreen onDone={handleLoaderDone} />}
 
       {/* Header */}
       <div className="header flex items-center justify-between bg-black px-6 py-3" style={{ flexShrink: 0 }}>
