@@ -1,0 +1,98 @@
+import { useEffect, useState } from 'react';
+
+const LOADER_DURATION_MS = 2500;
+const FADE_DURATION_MS = 500;
+
+export default function LoadingScreen({ onDone }) {
+  const [fading, setFading] = useState(false);
+
+  useEffect(() => {
+    const fadeTimer = setTimeout(() => setFading(true), LOADER_DURATION_MS);
+    const doneTimer = setTimeout(onDone, LOADER_DURATION_MS + FADE_DURATION_MS);
+    return () => {
+      clearTimeout(fadeTimer);
+      clearTimeout(doneTimer);
+    };
+  }, [onDone]);
+
+  return (
+    <div
+      style={{
+        margin: 0,
+        padding: 0,
+        backgroundColor: '#0b0b0b',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
+        width: '100vw',
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        zIndex: 9999,
+        opacity: fading ? 0 : 1,
+        transition: `opacity ${FADE_DURATION_MS}ms ease`,
+      }}
+    >
+      <style>{`
+        @keyframes spin {
+          0%   { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        .spotify-loader {
+          position: relative;
+          width: 160px;
+          height: 160px;
+          border: 4px solid #282828;
+          overflow: hidden;
+          border-radius: 50%;
+          box-shadow:
+            -5px -5px 5px rgba(255,255,255,0.05),
+            10px 10px 10px rgba(0,0,0,0.4),
+            inset -5px -5px 5px rgba(255,255,255,0.05),
+            inset 10px 10px 10px rgba(0,0,0,0.4);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .spotify-loader::before {
+          content: "";
+          position: absolute;
+          top: 25px; left: 25px; right: 25px; bottom: 25px;
+          z-index: 10;
+          background: #121212;
+          border-radius: 50%;
+          border: 2px solid #292929;
+          box-shadow:
+            inset -2px -2px 5px rgba(255,255,255,0.05),
+            inset 3px 3px 5px rgba(0,0,0,0.5);
+        }
+        .spotify-loader span {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background-image: linear-gradient(-225deg, #1db954 0%, #1ed760 50%, #a5f3bc 100%);
+          filter: blur(20px);
+          z-index: 1;
+          animation: spin 0.6s linear infinite;
+        }
+        .spotify-loader svg {
+          position: relative;
+          z-index: 20;
+          width: 105px;
+          height: 105px;
+          fill: #1db954;
+          filter: drop-shadow(0px 0px 6px rgba(29,185,84,0.6));
+        }
+      `}</style>
+
+      <div className="spotify-loader">
+        <span></span>
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424c-.18.295-.565.387-.86.207-2.377-1.454-5.37-1.783-8.894-.982-.336.075-.67-.136-.746-.472-.076-.336.135-.67.472-.746 3.855-.88 7.15-.51 9.82 1.127.294.18.388.565.208.866zm1.223-2.723c-.227.367-.707.487-1.074.26-2.72-1.672-6.87-2.157-10.076-1.183-.412.125-.845-.107-.97-.52-.124-.413.108-.846.52-.97 3.666-1.112 8.238-.575 11.34 1.332.367.227.487.707.26 1.074zm.105-2.833C14.382 8.87 8.337 8.67 4.856 9.726c-.53.16-1.09-.142-1.25-.67-.16-.53.14-1.09.67-1.25 4.01-1.217 10.694-.982 14.76 1.43.477.284.633.9.35 1.377-.284.478-.9.633-1.377.35z"/>
+        </svg>
+      </div>
+    </div>
+  );
+}
