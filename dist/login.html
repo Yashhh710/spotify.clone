@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login</title>
+  <style>
+    html,body{height:100%;margin:0;background:#000;overflow:hidden}
+    .wrap{height:100%;display:flex;align-items:center;justify-content:center}
+    img{width:100%;height:auto;max-height:100%;cursor:pointer;display:block;user-select:none;-webkit-user-select:none;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <img id="login-img" src="/assets/lohinandsingin.png" alt="Login" draggable="false" />
+  </div>
+  <script>
+    const img = document.getElementById('login-img');
+    img.addEventListener('click', () => {
+      window.close();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') window.close();
+    });
+  </script>
+</body>
+</html>

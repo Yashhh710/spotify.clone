@@ -1,0 +1,33 @@
+{
+  "trending": [
+    { "name": "Alakh Niranjan", "desc": "A spiritual chant about the unseen divine.", "src": "https://i.ytimg.com/vi/tkPAJPgWNr0/maxresdefault.jpg" },
+    { "name": "Papletwali", "desc": "The songs everyone is talking about.", "src": "https://c.saavncdn.com/206/Papletwali-Marathi-2019-20191020221426-500x500.jpg" },
+    { "name": "Avtan", "desc": "Traditional vibes with powerful cultural energy.", "src": "https://c.saavncdn.com/828/Avtan-Marathi-2020-20201012163507-500x500.jpg" },
+    { "name": "Jai Jai Maharashtra Maza", "desc": "A proud anthem celebrating the spirit of Maharashtra.", "src": "https://i.scdn.co/image/ab67616d0000b273e28b60fbbf0b0cba76cb9ad1" },
+    { "name": "Mazya Sonya", "desc": "A sweet and emotional song full of love.", "src": "https://c.saavncdn.com/850/Mazya-Sonya-Marathi-2026-20260217044007-500x500.jpg" }
+  ],
+
+  "artists": [
+    { "name": "Jagdish Patil", "desc": "Artist", "src": "https://yt3.googleusercontent.com/ytc/AIdro_m8Vq5aM_Cj_aq9NjGkXv7jJkYT_MOLYnskWrSSEfe-_jI=s900-c-k-c0x00ffffff-no-rj" },
+    { "name": "Preet Bandre", "desc": "Artist", "src": "https://i.scdn.co/image/ab6761610000e5eb7e9856abfd4da0990de5fd06" },
+    { "name": "Shubh", "desc": "Artist", "src": "https://i.scdn.co/image/ab6761610000e5eb9dfbd284ba8a7d4876a181e3" },
+    { "name": "Yo Yo Honey Singh", "desc": "Artist", "src": "https://yt3.googleusercontent.com/hXT_E7EUeCD27ImQiYQHMJ5L068w2CpnfFg9VMG_Gq_1gV2iFuZoNLgqnlnphFafNGSiZmpWIQ=s900-c-k-c0x00ffffff-no-rj" },
+    { "name": "MC Stan", "desc": "Artist", "src": "https://assets.gqindia.com/photos/602fc5e54e72d5b6e0813401/1:1/w_1080,h_1080,c_limit/Altaf%20Shaikh.jpg" }
+  ],
+
+  "albums": [
+    { "name": "Agri Koli Band", "desc": "Song by Vishal Sapte ‧ 2024", "src": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c8/84/cd/c884cdae-d287-2b30-6ac2-e0769b52df53/33e6e8d3-3a29-453a-ac13-9944f92b2f31.jpg/400x400bb.webp" },
+    { "name": "Bella Ciao x Lobby Lobby", "desc": "remix by Albums Of ShreeMan LegenD ‧ 2022", "src": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/60/c2/6e/60c26edc-f0c1-52db-5a4b-f6c87fd94028/artwork.jpg/3000x3000bb.jpg" },
+    { "name": "Still Rollin", "desc": "Song bt Shubh ‧ 2023", "src": "https://images.genius.com/e7784b5cf3b83ef1441298dd0293f6a8.1000x1000x1.jpg" },
+    { "name": "Theme From San Andreas", "desc": "Song by Michael Hunter ‧ 2004", "src": "https://i.scdn.co/image/ab67616d0000b2733175d0e037e2f83d9d03719e" },
+    { "name": "The Last Ride", "desc": "Song by Sidhu Moose Wala ‧ 2022", "src": "https://upload.wikimedia.org/wikipedia/en/e/e4/The_Last_Ride_2022_song.jpg" }
+  ],
+
+"radio": [
+    { "name": "Jagdish Patil Radio", "desc": "By Spotify", "src": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/4CZEYijqQPPdNC75wHWTjO/en" },
+    { "name": "Shubh Radio", "desc": "By Spotify", "src": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/5r3wPya2PpeTTsXsGhQU8O/en" },
+    { "name": "Sidhu Moose Wala Radio", "desc": "By Spotify", "src": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/4PULA4EFzYTrxYvOVlwpiQ/en" },
+    { "name": "Preet Bandre Radio", "desc": "By Spotify", "src": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/53vx7sCjX8Ll1I0H59ZDr2/en" },
+    { "name": "Ajay Gaikwad Radio", "desc": "By Spotify", "src": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/150Zp9vZpxMFca0H2b5NOx/en" }
+  ]
+}
