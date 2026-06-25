@@ -1,4 +1,3 @@
-````md
 # 🎵 Spotify Clone
 
 A modern **Spotify Clone** built with **React.js** as part of my class work. This project recreates the look and feel of Spotify with a clean, responsive user interface and smooth navigation.
