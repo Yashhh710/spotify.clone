@@ -27,7 +27,7 @@ A modern **Spotify Clone** built with **React.js** as part of my class work. Thi
 
 ## 📸 Preview
 
-> Add screenshots of your project here.
+<img width="1454" height="833" alt="Image" src="https://github.com/user-attachments/assets/cd684b03-2129-4203-a733-e2995dbe664a" />
 
 ## 📦 Installation
 
